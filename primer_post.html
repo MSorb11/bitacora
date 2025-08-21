@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Mauro Sorbello - Mi vida como estudiante</title>
+    <style>
+        /* Variables y Reset Básico */
+        :root {
+            --light-cream: #f8f8f4;
+            --dark-text: #333333;
+            --light-grey-text: #666666;
+            --accent-black: #000000;
+            --border-line: #e0e0e0;
+            --joke-color: #d63031; /* Un color para destacar los chistes en el tema claro */
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif; /* Usamos Open Sans como alternativa limpia */
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-cream);
+            color: var(--dark-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            /* Estas propiedades de flexbox ayudan a centrar el contenido principal */
+            display: flex;
+            flex-direction: column; /* Para apilar header, hero y main */
+            align-items: center; /* Centra horizontalmente todo el contenido */
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--dark-text);
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* --- Header y Navegación (Consistente con index.html) --- */
+        .header {
+            width: 100%;
+            background-color: transparent;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-line);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar-logo {
+            font-family: 'Lora', serif; /* Simula la tipografía del logo "lora" */
+            font-size: 2.2em;
+            font-weight: bold;
+            color: var(--dark-text);
+            flex-grow: 1; /* Permite que el logo ocupe el espacio */
+            text-align: center; /* Centra el logo */
+        }
+
+        .navbar-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+            position: absolute; /* Posicionamiento absoluto para controlar el centrado */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .navbar-links li a {
+            font-size: 1em;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .navbar-links li a:hover {
+            border-color: var(--dark-text);
+        }
+        
+        /* Ocultar elementos en móviles para simplificar el diseño */
+        @media (max-width: 768px) {
+            .navbar-links {
+                display: none; /* Oculta los enlaces de navegación */
+            }
+            .navbar-logo {
+                text-align: left; /* Alinea el logo a la izquierda en móviles */
+                flex-grow: 0;
+            }
+        }
+
+        .navbar-button {
+            padding: 10px 20px;
+            background-color: var(--accent-black);
+            color: var(--light-cream);
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        .navbar-button:hover {
+            background-color: #333;
+        }
+
+        /* --- Sección de Portada del Post (Similar a Hero de index.html) --- */
+        .post-hero-section {
+            text-align: center;
+            padding: 80px 20px 50px;
+            max-width: 800px;
+            margin: 0 auto; /* Centra horizontalmente */
+            width: 100%; /* Asegura que ocupe todo el ancho disponible hasta max-width */
+            background-color: var(--light-cream); /* Fondo claro para esta sección */
+            box-sizing: border-box; /* Incluir padding en el ancho */
+        }
+
+        .post-hero-section h1 {
+            font-family: 'Lora', serif; /* Fuente distintiva para el título del post */
+            font-size: 3.5em; /* Ligeramente más pequeño que el hero principal */
+            font-weight: normal;
+            margin-bottom: 10px;
+            color: var(--dark-text);
+        }
+
+        .post-hero-section p {
+            font-size: 1.1em;
+            color: var(--light-grey-text);
+            margin-top: 0;
+        }
+
+        /* --- Contenedor Principal del Post --- */
+        .post-content-container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #ffffff; /* Contenedor blanco para el texto del post */
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin: 0 auto 40px auto; /* Centra horizontalmente el div y añade margen inferior */
+            box-sizing: border-box; /* Para que el padding no afecte el width */
+        }
+
+        /* Estilos del contenido del post */
+        .post-content-container p {
+            font-size: 1.05em;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: var(--dark-text);
+        }
+
+        .post-content-container h2 {
+            font-family: 'Lora', serif;
+            font-size: 1.8em;
+            color: var(--accent-black);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-line); /* Subrayado sutil para secciones */
+            padding-bottom: 0.5rem;
+        }
+
+        /* Estilo para los chistes */
+        .joke {
+            font-style: italic;
+            color: var(--joke-color);
+            background-color: #fff6e4; /* Fondo claro y sutil para los chistes */
+            border-left: 4px solid var(--joke-color);
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+        
+        /* --- Footer (Consistente con index.html) --- */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-line);
+            color: var(--light-grey-text);
+            font-size: 0.85em;
+            background-color: #ffffff; /* Fondo blanco para el footer */
+            box-sizing: border-box;
+        }
+
+        /* Adaptaciones para móviles */
+        @media (max-width: 768px) {
+            .post-hero-section h1 {
+                font-size: 2.5em;
+            }
+            .post-content-container {
+                margin: 20px;
+                padding: 30px;
+            }
+            .post-content-container p {
+                font-size: 1em;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .navbar-links {
+                position: static;
+                transform: none;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <span class="navbar-logo">MAURO SORBELLO</span>
+            <!-- Aquí puedes añadir más enlaces si lo deseas, como en index.html -->
+            <a href="index.html" class="navbar-button">INICIO BLOG</a>
+        </nav>
+    </header>
+
+    <div class="post-hero-section">
+        <div class="post-hero-content">
+            <h1>Mi Bitácora del Semestre: ¿Quién soy y qué me mueve?</h1>
+            <p>Publicado por Mauro Sorbello el 20 de Agosto de 2025</p>
+        </div>
+    </div>
+
+    <main class="post-content-container">
+        <p>Soy Mauro Sorbello, CEO de la mayor empresa de patitos de juguete del mundo.</p>
+        <p class="joke">Na, mentira, soy un simple estudiante de la FING.</p>
+        <p>Crecí en una buena familia. Tengo mis dos papás, dos hermanos y tres abuelos. Y el que no está me dio todo en vida. Todos ellos me enseñaron los valores que me guían hoy en día. Me encanta estar rodeado de gente y es difícil encontrarme en mi casa, siempre busco hacer planes variados. Mi mamá siempre se queja de que no llego para la cena, jajaja.</p>
+
+        <h2>Mis Pasiones y Proyectos</h2>
+        <p>Suelo pasar mi tiempo con Sol (mi novia), mis amigos y mi familia. También dedico gran parte de mi tiempo a jugar al fútbol. Juego futsal federado en YPF, y además juego todos los sábados con el equipo de la facultad: “La Harponeta”.</p>
+        <p>“La Harponeta” es como un hijo para mí. La fundamos con varios amigos de la Licenciatura en Ciencias de la Computación (LCC). Todos los años somos el peor mejor equipo, pero somos felices jugando y tomando algo después de cada partido.</p>
+
+        <h2>Mi Vida Laboral</h2>
+        <p>Trabajo como timer y especialista informático/programador para cinco empresas ubicadas en Argentina, México, Inglaterra y Estados Unidos. Suena a mucho, pero mis amigos y yo solemos decir que vivo robando. Es un trabajo bastante sencillo para un programador y, a veces, no lleva nada de tiempo. Sin embargo, hay eventos que requieren mucho esfuerzo, planificación, manejo de personas y gran capacidad para llevarlos a cabo.</p>
+
+        <h2>Mis Expectativas de Vida</h2>
+        <p>Mis expectativas han cambiado con los años. Antes soñaba con ser una persona exitosa y con gran renombre. Ahora que tengo cierto éxito en mi nicho, mi expectativa es simplemente vivir la vida: pasar los fines de semana con mi novia y amigos, viajar y ganar lo suficiente para no preocuparme por mis gastos sin tener que trabajar en exceso.</p>
+        <p>Puede parecer una meta muy ambiciosa, pero hay meses en los que ya lo ha logrado, al menos en la realidad de vivir con mis padres.</p>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; Mauro Sorbello 2025</p>
+    </footer>
+</body>
+</html>
