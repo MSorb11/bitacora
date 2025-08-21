@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Mauro Sorbello - Inicio</title>
+    <style>
+        /* Variables y Reset Básico */
+        :root {
+            --light-cream: #f8f8f4;
+            --dark-text: #333333;
+            --light-grey-text: #666666;
+            --accent-black: #000000;
+            --border-line: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif; /* Usamos Open Sans como alternativa limpia */
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-cream);
+            color: var(--dark-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--dark-text);
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* --- Header y Navegación --- */
+        .header {
+            width: 100%;
+            background-color: transparent;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-line);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar-logo {
+            font-family: 'Lora', serif; /* Simula la tipografía del logo "lora" */
+            font-size: 2.2em;
+            font-weight: bold;
+            color: var(--dark-text);
+            flex-grow: 1; /* Permite que el logo ocupe el espacio */
+            text-align: center; /* Centra el logo */
+        }
+
+        .navbar-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+            position: absolute; /* Posicionamiento absoluto para controlar el centrado */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .navbar-links li a {
+            font-size: 1em;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .navbar-links li a:hover {
+            border-color: var(--dark-text);
+        }
+        
+        /* Ocultar elementos en móviles para simplificar el diseño */
+        @media (max-width: 768px) {
+            .navbar-links {
+                display: none; /* Oculta los enlaces de navegación */
+            }
+            .navbar-logo {
+                text-align: left; /* Alinea el logo a la izquierda en móviles */
+                flex-grow: 0;
+            }
+        }
+
+        .navbar-button {
+            padding: 10px 20px;
+            background-color: var(--accent-black);
+            color: var(--light-cream);
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        .navbar-button:hover {
+            background-color: #333;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            text-align: center;
+            padding: 80px 20px 50px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-section h1 {
+            font-family: 'Lora', serif; /* Fuente distintiva para el título principal */
+            font-size: 4em;
+            font-weight: normal;
+            margin-bottom: 20px;
+            color: var(--dark-text);
+        }
+
+        .hero-section p {
+            font-size: 1.1em;
+            color: var(--light-grey-text);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-categories {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .hero-categories a {
+            font-weight: bold;
+            color: var(--dark-text);
+            text-transform: uppercase;
+            font-size: 0.9em;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--dark-text); /* Línea divisoria */
+        }
+
+        /* --- Grid de Entradas (Post Previews) --- */
+        .posts-grid-container {
+            max-width: 1200px;
+            margin: 40px auto 80px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 columnas responsivas */
+            gap: 30px;
+        }
+
+        .post-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-card-image {
+            width: 100%;
+            height: 220px; /* Altura fija para las imágenes */
+            background-color: #f0f0f0; /* Color de fondo si no hay imagen */
+            display: block;
+            object-fit: cover; /* Asegura que la imagen cubra el área */
+        }
+        
+        /* Placeholder para simular el estilo visual de la imagen de referencia */
+        .post-card-image.placeholder-1 { background-image: url('https://placehold.co/400x220/333/fff?text=Entrada%201'); }
+        .post-card-image.placeholder-2 { background-image: url('https://placehold.co/400x220/2b5c47/fff?text=Entrada%202'); }
+        .post-card-image.placeholder-3 { background-image: url('https://placehold.co/400x220/adad2c/fff?text=Entrada%203'); }
+        .post-card-image.placeholder-4 { background-image: url('https://placehold.co/400x220/5d4f6d/fff?text=Entrada%204'); }
+        .post-card-image.placeholder-5 { background-image: url('https://placehold.co/400x220/734c32/fff?text=Entrada%205'); }
+        .post-card-image.placeholder-6 { background-image: url('https://placehold.co/400x220/4a768e/fff?text=Entrada%206'); }
+
+
+        .post-card-content {
+            padding: 25px;
+        }
+
+        .post-card-content h4 {
+            font-family: 'Lora', serif; /* Fuente para títulos de entradas */
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--dark-text);
+            font-weight: 600;
+        }
+
+        .post-card-content p {
+            font-size: 0.95em;
+            color: var(--light-grey-text);
+            margin-bottom: 15px;
+        }
+
+        .post-card-content .read-more {
+            font-size: 0.85em;
+            font-weight: bold;
+            color: var(--accent-black);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-line);
+            color: var(--light-grey-text);
+            font-size: 0.85em;
+            background-color: #ffffff; /* Fondo blanco para el footer */
+        }
+
+        /* Adaptaciones para móviles */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 3em;
+            }
+            .hero-section p {
+                font-size: 1em;
+            }
+            .hero-categories {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .posts-grid-container {
+                grid-template-columns: 1fr; /* Una columna en móviles */
+                padding: 0 15px;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .navbar-links {
+                position: static; /* Restaura el posicionamiento */
+                transform: none;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                display: flex; /* Mostrar enlaces en móviles si es necesario, o mantener hidden */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <span class="navbar-logo">MAURO SORBELLO</span>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Hola, mundo!</h1>
+            <p>
+                Bienvenidos a mi bitácora personal
+            </p>
+        </div>
+    </div>
+
+    <main class="posts-grid-container">
+        <!-- Entrada 1: Bitácora completa -->
+        <div class="post-card">
+            <a href="primer_post.html">
+                <img class="post-card-image placeholder-1" src="aa.jgp">
+                <div class="post-card-content">
+                    <h4>Presentación</h4>
+                    <p>Soy un simple estudiante de la FING... Te cuento sobre mi vida, pasiones y expectativas.</p>
+                    <span class="read-more">Leer más &rarr;</span>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; Mauro Sorbello 2025</p>
+    </footer>
+</body>
+</html>
