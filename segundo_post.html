@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Mauro Sorbello - Análisis de Perfil Personal</title>
+    <style>
+        /* Variables y Reset Básico */
+        :root {
+            --light-cream: #f8f8f4;
+            --dark-text: #333333;
+            --light-grey-text: #666666;
+            --accent-black: #000000;
+            --border-line: #e0e0e0;
+            --joke-color: #d63031; /* Un color para destacar los chistes en el tema claro */
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif; /* Usamos Open Sans como alternativa limpia */
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-cream);
+            color: var(--dark-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-osx-font-smoothing: grayscale;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--dark-text);
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* --- Header y Navegación --- */
+        .header {
+            width: 100%;
+            background-color: transparent;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-line);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar-logo {
+            font-family: 'Lora', serif;
+            font-size: 2.2em;
+            font-weight: bold;
+            color: var(--dark-text);
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        /* Ocultar elementos en móviles para simplificar el diseño */
+        @media (max-width: 768px) {
+            .navbar-links {
+                display: none;
+            }
+            .navbar-logo {
+                text-align: left;
+                flex-grow: 0;
+            }
+        }
+
+        .navbar-button {
+            padding: 10px 20px;
+            background-color: var(--accent-black);
+            color: var(--light-cream);
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        .navbar-button:hover {
+            background-color: #333;
+        }
+
+        /* --- Sección de Portada del Post --- */
+        .post-hero-section {
+            text-align: center;
+            padding: 80px 20px 50px;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            background-color: var(--light-cream);
+            box-sizing: border-box;
+        }
+
+        .post-hero-section h1 {
+            font-family: 'Lora', serif;
+            font-size: 3.5em;
+            font-weight: normal;
+            margin-bottom: 10px;
+            color: var(--dark-text);
+        }
+
+        .post-hero-section p {
+            font-size: 1.1em;
+            color: var(--light-grey-text);
+            margin-top: 0;
+        }
+
+        /* --- Contenedor Principal del Post --- */
+        .post-content-container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin: 0 auto 40px auto;
+            box-sizing: border-box;
+        }
+
+        /* Estilos de la imagen dentro del post */
+        .post-image {
+            display: block;
+            margin: 0px auto 30px auto; /* Centrar y añadir margen inferior */
+            border-radius: 50%; /* Hacer la imagen redonda */
+            width: 150px; /* Tamaño de la imagen dentro del post */
+            height: 150px;
+            object-fit: cover; /* Asegurar que la imagen cubra el área sin distorsión */
+            border: 3px solid #81c784; /* Borde sutil */
+        }
+
+        /* Estilos del contenido del post */
+        .post-content-container p {
+            font-size: 1.05em;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: var(--dark-text);
+        }
+
+        .post-content-container h2 {
+            font-family: 'Lora', serif;
+            font-size: 1.8em;
+            color: var(--accent-black);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-line);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Estilo para los chistes */
+        .joke {
+            font-style: italic;
+            color: var(--joke-color);
+            background-color: #fff6e4;
+            border-left: 4px solid var(--joke-color);
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+        
+        /* --- Footer --- */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-line);
+            color: var(--light-grey-text);
+            font-size: 0.85em;
+            background-color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        /* Adaptaciones para móviles */
+        @media (max-width: 768px) {
+            .post-hero-section h1 {
+                font-size: 2.5em;
+            }
+            .post-content-container {
+                margin: 20px;
+                padding: 30px;
+            }
+            .post-content-container p {
+                font-size: 1em;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .navbar-links {
+                position: static;
+                transform: none;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <span class="navbar-logo">MAURO SORBELLO</span>
+            <a href="index.html" class="navbar-button">INICIO BLOG</a>
+        </nav>
+    </header>
+
+    <div class="post-hero-section">
+        <div class="post-hero-content">
+            <h1>Análisis de Perfil Personal: Más allá de la Bitácora</h1>
+            <p>Publicado por Mauro Sorbello</p>
+        </div>
+    </div>
+
+    <main class="post-content-container">
+        <p>En la primera entrada de la bitácora compartí una presentación desde una perspectiva subjetiva. En esta ocasión, profundizaré en mi personalidad y habilidades a partir de los resultados obtenidos en diversos tests de autoconocimiento, analizando su relevancia tanto en el ámbito profesional como en el personal.</p>
+
+        <h2>16 Personalities: El Activista (ENFP)</h2>
+        <p>El test de 16 Personalities me clasificó como un Activista (ENFP). Este tipo de personalidad se caracteriza por ser entusiasta, creativa y sociable. Dichas características se ajustan bastante a lo que hablé en la presentación sobre estar rodeado de personas, la búsqueda de planes variados, etc., tal como se mencionó previamente en mi presentación personal.</p>
+        
+        <p>En el contexto profesional, esta orientación puede manifestarse como una fortaleza significativa. La capacidad de motivar equipos y fomentar un ambiente colaborativo resulta valiosa. Mi perfil me impulsa a buscar soluciones innovadoras en proyectos de programación y a mantener una perspectiva abierta. Aunque, un punto a tener en cuenta es que a veces me disperso si no le pongo foco a una sola cosa.</p>
+        
+        <h2>Inteligencias Múltiples: Musical y Kinestésica</h2>
+        <p>El test de Inteligencias Múltiples identificó la inteligencia Musical y Kinestésica como predominantes. La alta capacidad kinestésica se refleja claramente en mi pasión por el fútbol sala y mi participación regular en equipos como "La Harponeta" y en YPF. De hecho, mi psicóloga dice que es mi terapia. Esta necesidad de actividad física es fundamental para mi bienestar y gestión de energía.</p>
+        <p>Aunque la profesión de programador implica un trabajo predominantemente sedentario, la inteligencia kinestésica puede traducirse en una aproximación práctica a la resolución de problemas. La capacidad de "aprender haciendo" y la necesidad de movimiento, incluso en momentos de reflexión, pueden ser herramientas para desbloquear soluciones complejas. La inteligencia musical, por su parte, aunque no se manifieste directamente en una actividad profesional musical, contribuye a mi concentración y manejo del estrés, siendo un factor de equilibrio en mi rutina. Un detalle importante es que no puedo trabajar sin un poco de música de fondo.</p>
+
+        <h2>Inteligencia Emocional: En la Media con Oportunidades de Mejora</h2>
+        <p>Mi puntaje de 27 sobre 45 en el Test de Inteligencia Emocional indica un nivel "en la media". Suelo identificar y controlar mis emociones, y en momentos de alta presión o gran carga emocional, tanto en la facultad como en el trabajo con eventos exigentes, he demostrado capacidad para superar los desafíos y, de hecho, esta es una característica que me destaca.</p>
+        <p>La aptitud para detectar emociones en los demás, mencionada como una habilidad presente, facilita las interacciones sociales y laborales, aspecto que se potencia con mi perfil Activista. No obstante, el test señala dificultades en la identificación de sentimientos en "ciertas personas" y la necesidad de mejorar en comunicación asertiva y la eliminación de "ciertos miedos". Estos son aspectos a mejorar, que tendré en cuenta para evitar problemas con la expresión de mis pensamientos y mejorar el trabajo en equipo.</p>
+
+        <p>Esto es muy valioso para continuar creciendo tanto en lo personal, como en lo laboral/académico.</p>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; Mauro Sorbello 2025</p>
+    </footer>
+</body>
+</html>
