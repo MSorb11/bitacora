@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Mauro Sorbello - Análisis de Perfil Personal</title>
+    <style>
+        /* Variables y Reset Básico */
+        :root {
+            --light-cream: #f8f8f4;
+            --dark-text: #333333;
+            --light-grey-text: #666666;
+            --accent-black: #000000;
+            --border-line: #e0e0e0;
+            --joke-color: #d63031;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-cream);
+            color: var(--dark-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--dark-text);
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        .header {
+            width: 100%;
+            background-color: transparent;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-line);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar-logo {
+            font-family: 'Lora', serif;
+            font-size: 2.2em;
+            font-weight: bold;
+            color: var(--dark-text);
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-links {
+                display: none;
+            }
+            .navbar-logo {
+                text-align: left;
+                flex-grow: 0;
+            }
+        }
+
+        .navbar-button {
+            padding: 10px 20px;
+            background-color: var(--accent-black);
+            color: var(--light-cream);
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        .navbar-button:hover {
+            background-color: #333;
+        }
+
+        .post-hero-section {
+            text-align: center;
+            padding: 80px 20px 50px;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            background-color: var(--light-cream);
+            box-sizing: border-box;
+        }
+
+        .post-hero-section h1 {
+            font-family: 'Lora', serif;
+            font-size: 3.5em;
+            font-weight: normal;
+            margin-bottom: 10px;
+            color: var(--dark-text);
+        }
+
+        .post-hero-section p {
+            font-size: 1.1em;
+            color: var(--light-grey-text);
+            margin-top: 0;
+        }
+
+        .post-content-container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin: 0 auto 40px auto;
+            box-sizing: border-box;
+        }
+
+        .post-content-container p {
+            font-size: 1.05em;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: var(--dark-text);
+        }
+
+        .post-content-container h2 {
+            font-family: 'Lora', serif;
+            font-size: 1.8em;
+            color: var(--accent-black);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-line);
+            padding-bottom: 0.5rem;
+        }
+
+        .joke {
+            font-style: italic;
+            color: var(--joke-color);
+            background-color: #fff6e4;
+            border-left: 4px solid var(--joke-color);
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-line);
+            color: var(--light-grey-text);
+            font-size: 0.85em;
+            background-color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .post-hero-section h1 {
+                font-size: 2.5em;
+            }
+            .post-content-container {
+                margin: 20px;
+                padding: 30px;
+            }
+            .post-content-container p {
+                font-size: 1em;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .navbar-links {
+                position: static;
+                transform: none;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <span class="navbar-logo">MAURO SORBELLO</span>
+            <a href="index.html" class="navbar-button">INICIO BLOG</a>
+        </nav>
+    </header>
+
+    <div class="post-hero-section">
+        <div class="post-hero-content">
+            <h1>Análisis de Perfil Personal: Más allá de la Bitácora</h1>
+            <p>Publicado por Mauro Sorbello</p>
+        </div>
+    </div>
+
+    <main class="post-content-container">
+        <p>En la primera entrada de la bitácora compartí una presentación desde una perspectiva subjetiva. En esta ocasión, profundizaré en mi personalidad y habilidades a partir de los resultados obtenidos en diversos tests de autoconocimiento, analizando su relevancia tanto en el ámbito profesional como en el personal.</p>
+
+        <h2>16 Personalities: El Activista (ENFP)</h2>
+        <p>El test de 16 Personalities me clasificó como un Activista (ENFP)...</p>
+
+        <h2>Inteligencias Múltiples: Musical y Kinestésica</h2>
+        <p>El test de Inteligencias Múltiples identificó la inteligencia Musical y Kinestésica...</p>
+
+        <h2>Inteligencia Emocional: En la Media con Oportunidades de Mejora</h2>
+        <p>Mi puntaje de 27 sobre 45 en el Test de Inteligencia Emocional indica un nivel "en la media"... </p>
+
+        <!-- NUEVA SECCIÓN -->
+        <h2>Ejercicio 3 – Reflexión sobre mi temperamento</h2>
+        <p>Según el test mi temperamento predominante es <strong>Sanguíneo</strong>. No me sorprendió para nada, porque me identifico con casi todo lo que dice. Soy de los que siempre están haciendo algo, rodeado de gente, metido en mil cosas a la vez y buscando nuevos planes. Rara vez estoy quieto o solo.</p>
+
+        <p>Me gusta conversar, reírme, motivar a los demás y hacer que el ambiente sea más liviano. En los grupos suelo ser el que trata de alivianar las cosas con chistes o propone ideas, aunque reconozco que también puedo distraerme fácil o dejar cosas a medio camino si algo nuevo me entusiasma más.</p>
+
+        <p>Leyendo la descripción del sanguíneo me sentí muy reflejado: entusiasta, sociable, optimista y espontáneo, pero también algo disperso y olvidadizo. Es verdad que a veces me cuesta mantener el foco o ser puntual, aunque con el tiempo fui aprendiendo a equilibrar eso, sobre todo en el trabajo y los proyectos grandes.</p>
+
+        <p>Creo que mi energía y forma de ser ayudan a contagiar entusiasmo a los demás. Pero también aprendí que necesito complementarme con gente más estructurada o tranquila, como los melancólicos o flemáticos, para no perder el eje.</p>
+
+        <div class="joke">Un dato que me pareció muy gracioso es que dice "No puedo recordar nombres". En mi trabajo tengo que hablar todo el tiempo con personas diferentes —organizadores, ayudantes, etc.— y en cada evento me anoto los nombres y sus puestos porque no logro recordarlos.</div>
+
+        <p>En lo que discierno es en la descripción de debilidades en el trabajo. Mis jefes me consideran alguien muy metódico y analista. Suelo encontrar los detalles pequeños que definen eventos, y cada vez mejoro en la toma de decisiones siguiendo un análisis de tiempos o de dónde colocar cada punto de control siguiendo el circuito de las carreras.</p>
+
+        <p>En definitiva, me siento cómodo con este resultado. Ser sanguíneo tiene sus pros y contras, pero me gusta pensar que mi entusiasmo, mi forma de conectar con la gente y mi alegría son parte de lo que me define.</p>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; Mauro Sorbello 2025</p>
+    </footer>
+</body>
+</html>
