@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de adaptabilidad al cambio</title>
+    <style>
+        :root {
+            --light-cream: #f8f8f4;
+            --dark-text: #333333;
+            --light-grey-text: #666666;
+            --accent-black: #000000;
+            --border-line: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-cream);
+            color: var(--dark-text);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--dark-text);
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        .header {
+            width: 100%;
+            background-color: transparent;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-line);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar-logo {
+            font-family: 'Lora', serif;
+            font-size: 2.2em;
+            font-weight: bold;
+            color: var(--dark-text);
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .navbar-button {
+            padding: 10px 20px;
+            background-color: var(--accent-black);
+            color: var(--light-cream);
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        .navbar-button:hover {
+            background-color: #333;
+        }
+
+        .post-hero-section {
+            text-align: center;
+            padding: 80px 20px 50px;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            background-color: var(--light-cream);
+        }
+
+        .post-hero-section h1 {
+            font-family: 'Lora', serif;
+            font-size: 3.0em;
+            margin-bottom: 10px;
+            color: var(--dark-text);
+        }
+
+        .post-hero-section p {
+            font-size: 1.1em;
+            color: var(--light-grey-text);
+            margin-top: 0;
+        }
+
+        .post-content-container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin: 0 auto 40px auto;
+            box-sizing: border-box;
+        }
+
+        .post-content-container p {
+            font-size: 1.05em;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-content-container h2 {
+            font-family: 'Lora', serif;
+            font-size: 1.9em;
+            color: var(--accent-black);
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-line);
+            padding-bottom: 0.5rem;
+        }
+
+        .post-content-container img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-line);
+            color: var(--light-grey-text);
+            font-size: 0.85em;
+            background-color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .post-hero-section h1 {
+                font-size: 2.3em;
+            }
+            .post-content-container {
+                margin: 20px;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <span class="navbar-logo">MAURO SORBELLO</span>
+            <a href="index.html" class="navbar-button">INICIO BLOG</a>
+        </nav>
+    </header>
+
+    <div class="post-hero-section">
+        <div class="post-hero-content">
+            <h1>Reflexión sobre mi actitud frente al cambio</h1>
+            <p>Publicado por Mauro Sorbello</p>
+        </div>
+    </div>
+
+    <main class="post-content-container">
+
+        <h2>Resultado del test</h2>
+        <img src="test-adapt.jpg" alt="Resultado del test de adaptación">
+
+        <p>Según el test completado, mis respuestas se concentraron mayormente en las opciones <strong>3 y 4</strong>, lo que indica una fuerte predisposición hacia los cambios y una actitud abierta frente a las transformaciones, especialmente en el ámbito laboral y tecnológico.</p>
+
+        <h2>Características más relevantes</h2>
+
+        <p><strong>1. Capacidad rápida para resolver problemas en contextos de cambio.</strong><br>
+        Cuando aparece un cambio, en lugar de paralizarme, reacciono rápido. Identifico qué está pasando, qué implica y cómo puedo adaptarme. Esta agilidad me ha permitido avanzar profesionalmente y mantenerme siempre operativo incluso en momentos de incertidumbre.</p>
+
+        <p><strong>2. Alta adaptabilidad tecnológica.</strong><br>
+        Las nuevas herramientas o sistemas no me generan rechazo. Al contrario, suelen beneficiarme. Aprendo rápido cualquier tecnología o software nuevo, lo cual me destaca frente a mis compañeros. De hecho, el último cambio de software fue clave para que pudiera escalar y trabajar como especialista para tres empresas alrededor del mundo.</p>
+
+        <h2>Reflexión final</h2>
+        <p>Este test confirmó algo que vengo experimentando en los últimos años: los cambios, aunque difíciles, representan oportunidades de crecimiento. Mantenerme abierto, adaptable y predispuesto me permitió aprovechar transformaciones tecnológicas y profesionales que, de otro modo, quizás hubiera perdido.</p>
+
+    </main>
+
+    <footer>
+        <p>COPYRIGHT © Mauro Sorbello 2025</p>
+    </footer>
+</body>
+</html>
