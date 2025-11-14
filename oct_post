@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Mauro Sorbello - Test de Liderazgo</title>
+    <style>
+        :root {
+            --light-cream: #f8f8f4;
+            --dark-text: #333333;
+            --light-grey-text: #666666;
+            --accent-black: #000000;
+            --border-line: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-cream);
+            color: var(--dark-text);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent-black);
+            font-weight: bold;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+        .header {
+            width: 100%;
+            background-color: transparent;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-line);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar-logo {
+            font-family: 'Lora', serif;
+            font-size: 2.2em;
+            font-weight: bold;
+            color: var(--dark-text);
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .navbar-button {
+            padding: 10px 20px;
+            background-color: var(--accent-black);
+            color: var(--light-cream);
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        .navbar-button:hover {
+            background-color: #333;
+        }
+
+        .post-hero-section {
+            text-align: center;
+            padding: 80px 20px 50px;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .post-hero-section h1 {
+            font-family: 'Lora', serif;
+            font-size: 3.0em;
+            margin-bottom: 10px;
+            color: var(--dark-text);
+        }
+
+        .post-hero-section p {
+            font-size: 1.1em;
+            color: var(--light-grey-text);
+            margin-top: 0;
+        }
+
+        .post-content-container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin: 0 auto 40px auto;
+            box-sizing: border-box;
+        }
+
+        .post-content-container p {
+            font-size: 1.05em;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-content-container h2 {
+            font-family: 'Lora', serif;
+            font-size: 1.9em;
+            color: var(--accent-black);
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-line);
+            padding-bottom: 0.5rem;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-line);
+            color: var(--light-grey-text);
+            font-size: 0.85em;
+            background-color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .post-hero-section h1 {
+                font-size: 2.3em;
+            }
+            .post-content-container {
+                margin: 20px;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <span class="navbar-logo">MAURO SORBELLO</span>
+            <a href="index.html" class="navbar-button">INICIO BLOG</a>
+        </nav>
+    </header>
+
+    <div class="post-hero-section">
+        <div class="post-hero-content">
+            <h1>Resultados de mis Test de Liderazgo</h1>
+            <p>Publicado por Mauro Sorbello</p>
+        </div>
+    </div>
+
+    <main class="post-content-container">
+
+        <h2>Visualización de los Test</h2>
+
+        <p>Podés ver la resolución completa de mis test en los siguientes enlaces:</p>
+
+        <p>
+            ➤ <a href="https://drive.google.com/file/d/1uptJUlY9rNDCjvufz8MccnwMEY_VS3JA/view?usp=sharing" target="_blank">
+            Test de Liderazgo Situacional</a><br>
+            ➤ <a href="https://drive.google.com/file/d/1Pxr176SlX_3hjdDIbt1ZbXw-IUFcim45/view?usp=sharing" target="_blank">
+            Test de Blake & Mouton</a>
+        </p>
+
+        <h2>Test de Blake & Mouton</h2>
+
+        <p>En el test de Blake & Mouton obtuve <strong>6.0 en Gente</strong> y <strong>5.2 en Tarea</strong>, lo que me ubica dentro del estilo de <strong>Líder de Equipo</strong>. Este estilo combina la preocupación por las personas con un enfoque claro en los resultados.</p>
+
+        <p>Me sentí identificado con esta descripción porque, cuando trabajo con otras personas, busco mantener un ambiente positivo, comunicar con claridad y asegurarme de que todo salga bien, especialmente en contextos de alta presión como los eventos deportivos o las transmisiones en vivo.</p>
+
+        <h2>Test de Liderazgo Situacional</h2>
+
+        <p>En el test de Liderazgo Situacional, mi estilo predominante resultó ser <strong>S1 – Dirigir</strong>. Este estilo se caracteriza por marcar los pasos a seguir, organizar el trabajo y tomar decisiones rápidas.</p>
+
+        <p>Este resultado coincide con la forma en que suelo actuar cuando estoy a cargo de procesos técnicos en los que los tiempos son ajustados y no puede haber margen de error. Además, en la segunda parte del test obtuve un puntaje que me ubica como un líder <strong>efectivo</strong>, con margen para seguir desarrollando mayor flexibilidad según las necesidades del equipo.</p>
+
+        <h2>Reflexión final</h2>
+        <p>Ambos test muestran un perfil de liderazgo que reconozco en mi actividad laboral: tomo la iniciativa, organizo el trabajo y resuelvo rápido cuando es necesario, pero al mismo tiempo valoro el trato con las personas y la colaboración.</p>
+
+        <p>En el ámbito técnico y operativo en el que trabajo, este equilibrio me permite manejar situaciones complejas sin perder la claridad ni la comunicación con los demás. Estos resultados no solo reflejan cómo trabajo hoy, sino que también me sirven para seguir creciendo como líder.</p>
+
+    </main>
+
+    <footer>
+        <p>COPYRIGHT © Mauro Sorbello 2025</p>
+    </footer>
+</body>
+</html>
